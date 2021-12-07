@@ -144,15 +144,21 @@ def run(weights='weights/yolov5s.pt',  # 权重文件地址 默认 weights/best.
     for path, img, im0s, vid_cap in dataset:
         # 5.1、处理每一张图片的格式
         img = torch.from_numpy(img).to(device)  # numpy array to tensor and device
-        img = img.half() if half else img.float()  # 半精度训练 uint8 to fp16/32
+                    #将numpy转为pytorch的tensor,并转移到运算设备上计算
+        img = img.half() if half else img.float()  # 半精度训练 uint8 to fp16/32    ###############################################
+                    # img.half()：半精度训练可以提高速度同时少量影响正确率
+                    # 在模型载入GPU之前，即放到model.cuda()之前
+                    # 模型改为半精度以后，输入也需要改成半精度
         img /= 255.0  # 归一化 0 - 255 to 0.0 - 1.0
         # 如果图片是3维(RGB) 就在前面添加一个维度1当中batch_size=1
         # 因为输入网络的图片需要是4为的 [batch_size, channel, w, h]
         if img.ndimension() == 3:
-            img = img.unsqueeze(0)
+            img = img.unsqueeze(0)  #在dim0位置添加维度1，[channel, w, h] -> [batch_size, channel, w, h]
+            #返回一个新的张量，对输入的指定位置插入维度 1
 
         # 5.2、对每张图片/视频进行前向推理
-        t1 = time_synchronized()
+        t1 = time_synchronized()        #精确计算当前时间  并返回当前时间
+                    #正确测试代码在cuda运行时间，torch.cuda.synchronize()，使用该操作来等待GPU全部执行结束，CPU才可以读取时间信息。
         # pred shape=[1, num_boxes, xywh+obj_conf+classes] = [1, 18900, 25]
         pred = model(img, augment=augment)[0]
 
