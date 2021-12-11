@@ -677,6 +677,39 @@ def kmeans_targets(path='../coco/trainvalno5k.txt', n=9, img_size=416):  # from 
 
     # Plot
     # plt.hist(biou.numpy().ravel(), 100)
+'''
+#uster.vq.kmeans()
+def kmeans(obs, k_or_guess, iter=20, thresh=1e-5, check_finite=True):
+    obs = _asarray_validated(obs, check_finite=check_finite)
+    if iter < 1:
+        raise ValueError("iter must be at least 1, got %s" % iter)
+
+    # Determine whether a count (scalar) or an initial guess (array) was passed.
+    if not np.isscalar(k_or_guess):
+        guess = _asarray_validated(k_or_guess, check_finite=check_finite)
+        if guess.size < 1:
+            raise ValueError("Asked for 0 clusters. Initial book was %s" %
+                             guess)
+        return _kmeans(obs, guess, thresh=thresh)
+
+    # k_or_guess is a scalar, now verify that it's an integer
+    k = int(k_or_guess)
+    if k != k_or_guess:
+        raise ValueError("If k_or_guess is a scalar, it must be an integer.")
+    if k < 1:
+        raise ValueError("Asked for %d clusters." % k)
+
+    # initialize best distance value to a large value
+    best_dist = np.inf
+    for i in range(iter):
+        # the initial code book is randomly selected from observations
+        guess = _kpoints(obs, k)
+        book, dist = _kmeans(obs, guess, thresh=thresh)
+        if dist < best_dist:
+            best_book = book
+            best_dist = dist
+    return best_book, best_dist
+'''
 
 
 def print_mutation(hyp, results, bucket=''):
