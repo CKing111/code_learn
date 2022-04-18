@@ -1,0 +1,26 @@
+
+
+conda activate (base) 打开conda环境
+
+conda deactivate (base) 关闭conda环境
+
+conda info --envs  查看conda的虚拟环境
+
+conda create -n pyEnv36 python=3.6	新建虚拟环境
+
+conda remove -n pyEnv36 --all		删除虚拟环境
+
+conda activate pyEnv36			激活虚拟环境
+
+
+
+
+$ conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/		添加Anaconda的清华镜像源
+ 
+$ conda config --set show_channel_urls yes	设置搜索时显示配置通道地址
+
+conda config --show-sources   # 查看当前使用源
+ 
+conda config --remove channels 源链接     # 删除指定链接源
+
+

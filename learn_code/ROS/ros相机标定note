@@ -1,0 +1,71 @@
+相机标定note
+
+
+
+1.安装相机标定功能包
+
+sudo apt-get install ros-melodic-camera-calibration1
+sudo apt-get install ros-melodic-uvc-camera
+
+2.编译依赖驱动
+
+rosmake camera_calibration
+
+3.运行相机节点
+
+roscore
+#rosrun uvc_camera uvc_camera_node
+
+注意：用rostopic list和rosservice list 可以查看该驱动发布的topic和service，
+默认情况下是 ：/image_raw 和 /set_image_info 
+注意这里的topic和service和后面矫正包订阅的并不一样，所以运行驱动的时候要重新映射
+$rosrun uvc_camera uvc_camera_node image_raw:=/camera/image_raw set_camera_info:=/camera/set_camera_info
+
+
+
+4.打印当前相机信息
+
+rostopic echo /camera_info
+
+5.矫正棋盘准备
+
+6.运行矫正节点calibration
+
+$ rosrun camera_calibration cameracalibrator.py --size 7x9 --square 0.108 image:=/camera/image_raw camera:=/camera		
+ ( 需要根据自己的板子的实际方格的大小设置 参数7*9 和 0.108)
+
+7.标定
+
+调整矫正板
+矫正板在视野的上下左右位置
+X 轴：视野左右
+Y 轴：视野上下
+Size 条：前后 和倾斜
+矫正板充满整个视野
+矫正板倾斜着处于上下左右的位置
+每一步都要保证矫正板在视野内被点亮
+
+8.查看标定结果
+
+当CALIBRATE按钮亮起时，表示有足够数据用于矫正，点此按钮看下矫正效果
+
+矫正结果会在中端和上图中显示，评价标准：
+连续成功的校准将导致实际校正图像边缘连续出现。
+校准失败通常会导致空白或未被承认的图像,不保持直线边缘的图像。
+
+
+9.保存
+矫正成功后，点comment生成.yml文件
+点击CALIBRATE按钮，稍等1-2分钟，可以在命令窗中看到标定参数，点击COMMIT将结果保存到电脑路径：/home/sun/.ros/camera_info/head_camera.yaml,再次启动相机时就不会有Camera Calibration文件找不到的警告了。
+
+只需加载校准文件不会纠正图像。 为了矫正图像，请使用image_proc包。
+如果没有自动载入矫正文件 ，那么就需要调用下image_proc这个包。两种解决方案1.在启动usb_cam的launch文件下面再加上<node name="image_proc" pkg="image_proc" type="image_proc" ns="usb_cam"/>。2.或者启动usb_cam后，在终端命令窗口加上ROS_NAMESPACE=usb_cam rosrun image_proc image_proc。 
+
+
+用$rostopic echo /camera_info 指令查看现在的相机内参
+
+
+
+
+
+

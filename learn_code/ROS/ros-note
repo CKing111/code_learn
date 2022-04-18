@@ -1,0 +1,196 @@
+
+安装过程
+https://blog.csdn.net/qq_44830040/article/details/106049992?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162925074416780255267346%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&request_id=162925074416780255267346&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_v2~rank_v29-1-106049992.first_rank_v2_pc_rank_v29&utm_term=ros+Ubuntu+18.04++%E5%AE%89%E8%A3%85&spm=1018.2226.3001.4187
+
+
+roscore		启动
+
+rosrun (turtlesim turtlesim_node)	新终端启动项目
+
+rosrun turtlesim turtle_teleop_key	新终端键盘控制界面
+
+
+
+
+$ rosdep install --from-paths src --ignore-src --rosdistro=melodic -y											安装项目所有依赖
+
+gezabo -v 无法执行时需要sudo apt upgrade
+
+
+****error:
+1.如果roscd提示类似于roscd: No such package/stack 'beginner_tutorials'的话，你需要按照创建catkin工作空间后面的步骤使环境变量生效：
+	$ cd ~/catkin_ws
+	$ source devel/setup.bash
+	$ roscd beginner_tutorials
+2.问题：roscd这个命令不能够找到我的项目文件夹，但是这个文件夹确实存在。
+
+原因：没有将 /home/catkin_ws/devel/setup.bash添加.bashrc中
+
+
+3.
+
+教学：
+一、
+roscore = ros+core：主节点（为ROS提供命名服务) + rosout (stdout/stderr) + 参数服务器（会在以后介绍）
+rosnode = ros+node：获取节点信息的ROS工具
+rosrun = ros+run：运行给定的软件包中的节点
+
+$ rosnode list 查看正在运行的ROS节点信息
+
+$ rosnode info (/rosout)	返回的是某个指定节点的信息。
+
+$ rosrun [package_name] [node_name]	用包名直接运行软件包内的节点（而不需要知道包的路径）。
+
+$ rosnode cleanup	运行node list列表中名字未更新时，可以采用该指令更新node列表（关闭窗口时采用终端ctrl+C而非关闭窗口）
+
+$ rosnode ping （my_turtle）	ping指令来测试它是否正常运行
+
+
+
+二、运行实例
+
+$ rosrun rqt_graph rqt_graph			使用rqt_graph来显示当前运行的节点和话题。rqt_graph用动态的图显示了系统中正在发生的事情。
+
+rostopic 					rostopic命令工具能让你获取ROS话题的信息。
+
+
+rostopic echo					可以显示在某个话题上发布的数据。
+$ rostopic echo /turtle1/cmd_vel	让我们看看由turtle_teleop_key节点发布的“指令、速度”数据。
+
+rostopic list					能够列出当前已被订阅和发布的所有话题。
+$ rostopic list -v				会列出所有发布和订阅的主题及其类型的详细信息。
+
+
+rostopic type					命令用来查看所发布话题的消息类型。
+
+$ rostopic type /turtle1/cmd_vel		输出geometry_msgs/Twist消息
+$ rosmsg show geometry_msgs/Twist		输出消息的详细信息
+
+
+rostopic pub					可以把数据发布到当前某个正在广播的话题上。rostopic pub [topic] [msg_type] [args]
+$ rostopic pub -1 /turtle1/cmd_vel geometry_msgs/Twist -- '[2.0, 0.0, 0.0]' '[0.0, 0.0, 1.8]'
+	↑将消息发布到指定话题/-1:只发布一条消息/	接受话题的目标名称/使用消息类型/--：后面参数非选项/YAML语法，分别代表线动量和角动量的xyz浮点数
+$ rostopic pub /turtle1/cmd_vel geometry_msgs/Twist -r 1 -- '[2.0, 0.0, 0.0]' '[0.0, 0.0, -1.8]'	
+						        ↑用-r来发布连续消息,注意添加位置的移动
+
+三、运行数据处理：
+$ rostopic echo （/turtle1/pose）		运动过程中可以输入echo pose指令来查看消息发布数据
+
+rostopic hz					报告数据发布的速率。
+$ rostopic hz /turtle1/pose
+
+$ rostopic type /turtle1/cmd_vel | rosmsg show	可以结合rostopic type和rosmsg show命令来获取关于某个话题的更深层次信息：
+
+$ rosrun rqt_plot rqt_plot			rqt_plot命令可以在滚动时间图上显示发布到某个话题上的数据。
+						可以在左上角的文本框里面添加任何想要绘制的话题。在里面输入/turtle1/pose/x和/turtle1/pose/y
+						添加/turtle1/pose/theta
+
+四、ros服务和参数
+
+服务（Services）是节点之间通讯的另一种方式。服务允许节点发送一个请求（request）并获得一个响应（response）。
+rosservice list         输出活跃服务的信息		$ rosservice list
+
+
+rosservice call         用给定的参数,调用服务		$ rosservice call [service] [args]
+$ rosservice call /clear				清除了node背景上的轨迹。
+$ rosservice call /spawn 2 2 0.2 ""			让我们可以在给定的位置和角度生成一只新的乌龟,輸入type查詢到的信息
+
+rosservice type         (查看)输出服务的类型		$ rosservice type (/clear)
+$ rosservice type /spawn | rossrv show			查看spawn（产卵）服务的信息
+
+
+rosservice find         按服务的类型查找服务
+
+
+rosservice uri          输出服务的ROSRPC uri
+
+
+五、rosparam
+能让我们在ROS参数服务器（Parameter Server）上存储和操作数据，rosparam有很多命令可以用来操作参数。
+
+rosparam set            设置参数
+$ rosparam set /turtlesim/background_r 150		修改背景颜色的红色通道值
+	$ rosservice call /clear			需要调用clear服务使得参数的修改能生效：
+
+
+rosparam get            获取参数
+$ rosparam get /turtlesim/background_g 			获取背景的绿色通道的值：
+$ rosparam get /					顯示服務器上的所有參數
+
+
+rosparam load           从文件中加载参数
+$ rosparam load params.yaml copy_turtle			可以将yaml文件重载入新的命名空间，例如copy_turtle：
+
+rosparam dump           向文件中转储参数
+$ rosparam dump params.yaml				将所有的参数写入params.yaml文件：
+
+
+rosparam delete         删除参数
+rosparam list           列出参数名
+
+
+
+$ rosparam list						看看现在参数服务器上都有哪些参数：
+
+
+六、使用rqt_console和roslaunch
+在ROS中使用rqt_console和rqt_logger_level进行调试，以及使用roslaunch同时启动多个节点。
+
+rqt_console						连接到了ROS的日志框架，以显示节点的输出信息。
+$ rosrun rqt_console rqt_console			因为默认的日志级别是Info，所以你会看到turtlesim启动后发布的所有信息
+							日誌優先級別：Fatal （致命）、Error （错误）、Warn  （警告）、Info  （信息）、Debug （调试）
+
+
+
+rqt_logger_level					允许我们在节点运行时改变输出信息的详细级别，包括Debug、Info、Warn和Error`。
+$ rosrun rqt_logger_level rqt_logger_level	
+
+
+roslaunch						可以用来启动定义在launch（启动）文件中的节点，来启动多个节点
+$ roslaunch [package] [filename.launch]
+$ roslaunch beginner_tutorials turtlemimic.launch	啓動我們創建的launch文件
+
+
+
+七、创建ROS消息和服务
+如何创建和构建msg和srv文件，以及rosmsg、rossrv和roscp命令行工具的使用。
+msg（消息）：msg文件就是文本文件，用于描述ROS消息的字段。它们用于为不同编程语言编写的消息生成源代码。
+	msg文件存放在软件包的msg目录下，srv文件则存放在srv目录下。
+	msg文件就是简单的文本文件，每行都有一个字段类型和字段名称。
+	数据类型：Header，它含有时间戳和ROS中广泛使用的坐标帧信息。
+srv（服务）：一个srv文件描述一个服务。它由两部分组成：请求（request）和响应（response）。
+	srv文件和msg文件一样，只是它们包含两个部分：请求和响应。这两部分用一条---线隔开。
+		int64 A
+		int64 B
+		---
+		int64 Sum
+		在上面的例子中，A和B是请求, Sum是响应。
+
+
+
+创建mag：
+不过还有关键的一步：我们要确保msg文件能被转换为C++、Python和其他语言的源代码。打开package.xml, 确保它包含以下两行且没有被注释。如果没有，添加进去：
+	<build_depend>message_generation</build_depend>
+	<exec_depend>message_runtime</exec_depend>
+	在构建时，其实只需要message_generation，而在运行时，我们只需要message_runtime。
+	在CMakeLists.txt文件中，为已经存在里面的find_package调用添加message_generation依赖项
+		(见：http://wiki.ros.org/cn/ROS/Tutorials/CreatingMsgAndSrv)
+$ rosmsg show [message type]
+
+	
+
+
+创建srv：
+$ mkdir srv
+$ roscp [package_name] [file_to_copy_path] [copy_path]	
+	从另一个包复制现有的srv定义，而不是手动创建新的srv。
+	roscp是一个实用的命令行工具，用于将文件从一个包复制到另一个包。
+
+	我们要确保msg文件能被转换为C++、Python和其他语言的源代码。
+	  <build_depend>message_generation</build_depend>
+	  <exec_depend>message_runtime</exec_depend>
+$ rossrv show <service type>
+	若使用不指定包的方法show，则会打印出所有同名srv(原copy目标也会显示)
+
+
+

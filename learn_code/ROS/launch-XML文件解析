@@ -1,0 +1,22 @@
+//launch文件解析
+
+<launch>			//用launch标签开头，以表明这是一个launch文件。
+
+//創建兩個分組，並一命名空間標籤區分
+//这样可以让我们同时启动两个turtlesim模拟器，而不会产生節點命名冲突。
+  <group ns="turtlesim1">
+    <node pkg="turtlesim" name="sim" type="turtlesim_node"/>		//名为sim的turtlesim节点
+  </group>
+
+  <group ns="turtlesim2">
+    <node pkg="turtlesim" name="sim" type="turtlesim_node"/>		////名为sim的turtlesim节点，同上
+  </group>
+//启动模仿节点，话题的输入和输出分别重命名为turtlesim1和turtlesim2，这样就可以让turtlesim2模仿turtlesim1了。
+  <node pkg="turtlesim" name="mimic" type="mimic">
+    <remap from="input" to="turtlesim1/turtle1"/>
+    <remap from="output" to="turtlesim2/turtle1"/>
+  </node>
+
+</launch>				//launch文件的XML标签闭合。
+
+

@@ -1,0 +1,26 @@
+std_msgs/Header header		//// 点云的头信息
+  uint32 seq
+  time stamp			//// 时间戳
+
+  string frame_id
+uint32 height			// 点云高度，如果cloud是无序的，height是1，对于有结构点云来说，height代表点云的总行数
+uint32 width			////对于无组织或者说无结构的点云来说，width就是指点云中点的个数。 对于有结构的点云来说，width是指点云数据集一行上点的个数
+sensor_msgs/PointField[] fields		//点数据存储为二进制 blob，其布局如下
+  uint8 INT8=1
+  uint8 UINT8=2
+  uint8 INT16=3
+  uint8 UINT16=4
+  uint8 INT32=5
+  uint8 UINT32=6
+  uint8 FLOAT32=7			//
+  uint8 FLOAT64=8
+  string name
+  uint32 offset
+  uint8 datatype
+  uint32 count
+bool is_bigendian
+uint32 point_step		//// 一个点占的比特数
+uint32 row_step			////一行的长度占用的比特数
+uint8[] data			//// Actual point data, size is (row_step*height)
+bool is_dense		////断点云中的点是否包含 Inf/NaN这种值（包含为false）
+

@@ -1,0 +1,4 @@
+mmdetection  52****分支
+
+
+导出onnx11版本      torch.onnx.export(RHSIndexing(),)
