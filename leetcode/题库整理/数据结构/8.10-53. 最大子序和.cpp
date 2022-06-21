@@ -37,7 +37,7 @@ public:
     {
         //类似寻找最大最小值的题目，初始值一定要定义成理论上的最小最大值
         int max = INT_MIN;
-        int numsSize = int(nums.size());
+        int numsSize = int(nums.size());        //获取长度
         for (int i = 0; i < numsSize; i++)          //历遍
         {
             int sum = 0;                            //初始化和结果
