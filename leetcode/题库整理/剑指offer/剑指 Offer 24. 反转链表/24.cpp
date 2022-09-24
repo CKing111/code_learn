@@ -5,7 +5,7 @@
 class Solution {
 public:
     ListNode* reverseList(ListNode* head) {
-        ListNode *cur = head, *pre = nullptr;
+        ListNode *cur = head, *pre = nullptr;  // 初始化指针
         while(cur != nullptr) {
             ListNode* tmp = cur->next; // 暂存后继节点 cur.next
             cur->next = pre;           // 修改 next 引用指向
