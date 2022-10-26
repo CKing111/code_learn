@@ -1,0 +1,4 @@
+﻿  05-C++对C语言的增强-C语言.c
+D:\code\code_learn\learn_code\C++\黑马C++\1Day\05-C++对C语言的增强\05-C++对C语言的增强-C语言.c(28,16): warning C4101: “p1”: 未引用的局部变量
+D:\code\code_learn\learn_code\C++\黑马C++\1Day\05-C++对C语言的增强\05-C++对C语言的增强-C语言.c(15): warning C4716: “getRectS”: 必须返回一个值
+  05-C++对C语言的增强.vcxproj -> D:\code\code_learn\learn_code\C++\黑马C++\1Day\黑马1day\Debug\05-C++对C语言的增强.exe

@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "${workspaceFolder}",
-      "program": "${fileDirname}/${fileBasenameNoExtension}",
+      "cwd": "d:/code/code_learn/learn_code/C++/黑马C++/1Day",
+      "program": "d:/code/code_learn/learn_code/C++/黑马C++/1Day/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

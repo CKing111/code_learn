@@ -1,0 +1,1 @@
+const int a = 10; // C语言中默认const是默认链接
