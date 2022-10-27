@@ -1,0 +1,5 @@
+﻿  04-函数的默认参数以及占位参数.cpp
+D:\code\code_learn\learn_code\C++\黑马C++\2Day\04-函数的默认参数以及占位参数\04-函数的默认参数以及占位参数.cpp(20,21): error C2572: “myFunc”: 重定义默认参数 : 参数 1
+D:\code\code_learn\learn_code\C++\黑马C++\2Day\04-函数的默认参数以及占位参数\04-函数的默认参数以及占位参数.cpp(19): message : 参见“myFunc”的声明
+D:\code\code_learn\learn_code\C++\黑马C++\2Day\04-函数的默认参数以及占位参数\04-函数的默认参数以及占位参数.cpp(20,33): error C2572: “myFunc”: 重定义默认参数 : 参数 2
+D:\code\code_learn\learn_code\C++\黑马C++\2Day\04-函数的默认参数以及占位参数\04-函数的默认参数以及占位参数.cpp(19): message : 参见“myFunc”的声明
