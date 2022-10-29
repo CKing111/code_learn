@@ -1,0 +1,3 @@
+﻿  07-C语言下的封装.c
+D:\code\code_learn\learn_code\C++\黑马C++\2Day\07-C语言下的封装\07-C语言下的封装.c(42,12): warning C4133: “函数”: 从“Person *”到“Dog *”的类型不兼容
+  07-C语言下的封装.vcxproj -> D:\code\code_learn\learn_code\C++\黑马C++\2Day\01-作业-设计圆类求周长\Debug\07-C语言下的封装.exe

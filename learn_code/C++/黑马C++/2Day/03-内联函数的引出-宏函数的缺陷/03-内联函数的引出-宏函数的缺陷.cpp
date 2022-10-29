@@ -6,7 +6,7 @@ using namespace std;
 // 1. 定义加法
 #define MyAdd(x,y) x+y
 #define MyAdd2(x,y) (x+y)
-
+#define MAX 1024
 // 问题1：定义未严格出现运算错误
 void test01() {
 	int ret = MyAdd(10, 20);
@@ -59,6 +59,7 @@ int main() {
 	//test01();
 	//test02();
 	test03();
+	cout << MAX << endl;
 	system("pause");
 	return EXIT_SUCCESS;
 }

@@ -9,7 +9,7 @@ using namespace std;
 		通过面向对象思路，设计一个生成对象圆的类来计算周长
 		周长公式： 2 * pi * r
 */
-// 1.声明pi常量
+// 1.声明pi常量,用const替代#define
 const double pi = 3.14;
 // 2.设计一个求圆周长的类
 class Circle {
