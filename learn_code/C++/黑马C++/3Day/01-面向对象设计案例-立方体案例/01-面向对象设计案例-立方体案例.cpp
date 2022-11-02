@@ -19,7 +19,7 @@ public:
 	// 设置长
 	void setL(int l) { m_L = l;	}
 	// 获取长
-	int getL() { return m_L;	}
+	int getL()const { return m_L;	}  // 成员函数不允许修改
 	// 设置宽
 	void setW(int w) { m_W = w; }
 	// 获取宽
@@ -58,6 +58,12 @@ bool compareCube( Cube &c1, Cube &c2) {
 	}
 	return false;
 }
+// 上述问题解决办法：成员函数也添加const
+void func(const Cube & cub){
+	cub.getL();		// 正常，getL（）成员函数不允许修改
+}
+
+
 
 void test01() {
 	Cube c1;
