@@ -21,7 +21,7 @@ void test01() {
 }
 
 void test02() {
-	int s = 30;
+	int s = 3;
 	// using ±‡“Î÷∏¡Ó
 	using namespace C;
 	cout << C::s << endl;

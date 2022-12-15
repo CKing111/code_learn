@@ -11,7 +11,7 @@ void test01() {
 	//*p = 1000;
 	//cout << "m_A = " << m_A << ", *p = " << *p << endl;
 }
-// 3.普通变量可以初始化const变量
+// 3.使用普通变量来初始化const变量
 void test02() {
 	int a = 10;
 	const int b = a; // 变量初始化
@@ -37,8 +37,8 @@ void test03(){
 	cout << "姓名：" << p1.m_Name << ", 年龄：" << p1.m_Age << endl;
 }
 int main() {
-	test01();
-	//test03();
+	//test01();
+	test03();
 	system("pause");
 	return EXIT_SUCCESS;
 }

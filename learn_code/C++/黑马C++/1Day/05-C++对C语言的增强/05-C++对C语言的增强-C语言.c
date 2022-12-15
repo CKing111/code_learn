@@ -25,7 +25,7 @@ struct Person {
 	//void plusAge();	// C语言struct中不可以增加函数
 };
 void test03() {
-	struct Person p1; // C语言可以不增加struct
+	struct Person p1; // C++可以不增加struct
 	//p1.m_Age = 10;
 	//p1.plusAge();
 	//std::cout << p1.m_Age << std::endl;

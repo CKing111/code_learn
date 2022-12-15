@@ -56,6 +56,7 @@ void test05() {
 }
 
 // 7.const 增强
+//TODP: C++中const 增强
 const int m_A = 10; // 全局常量，受到保护，不会改
 void test06() {
 	//m_A = 100;
