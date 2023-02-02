@@ -48,7 +48,7 @@ void mySwap3(int& a, int& b) {		//&a = a
 void test03() {
 	int a = 10;
 	int b = 20;
-	mySwap3(a, b);	//引用传递
+	mySwap3(a, b);	//引用传递，ab改变了
 	cout << "a = " << a << endl;
 	cout << "b = " << b << endl;
 }
@@ -87,12 +87,12 @@ void test05() {
 	cout << "a = " << doWork2() << endl;
 
 }
-//int main() {
+int main() {
 	//test01();
 	//test02();
-	//test03();
+	test03();
 	//test04();
 	//test05();
-	//system("pause");
-	//return EXIT_SUCCESS;
-//}
+	system("pause");
+	return EXIT_SUCCESS;
+}

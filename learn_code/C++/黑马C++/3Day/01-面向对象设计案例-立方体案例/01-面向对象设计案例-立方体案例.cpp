@@ -38,9 +38,9 @@ public:
 	}
 
 	// 2.成员函数判断
-	bool compareCubeByClass(Cube &c){
+	bool compareCubeByClass(Cube &c){  // 传入类对象
 		// 用成员属性判断
-		bool ret = m_L == c.getL() &  m_W == c.getW() && m_H == c.getH();
+		bool ret = m_L == c.getL() &  m_W == c.getW() && m_H == c.getH(); //&&常用来连接多个条件。
 		return ret;
 	}
 };
@@ -50,7 +50,8 @@ public:
 // 判断两个立方体是否相等，长宽高都相等,bool类型函数
 // 引用传入，直接作业数据本体，不需要临时拆解
 // 如果加了const，则成员函数不能调用保护、隐私成员，const下保护乘员不能改变
-// const引用可以读取但是不可以被修改引用对象，任何对const引用进行赋值都是不合法的，它适用指向const对象的引用，而非const的引用不适用于指向const对象的引用。
+// const引用可以读取但是不可以被修改引用对象，任何对const引用进行赋值都是不合法的，
+// 它适用指向const对象的引用，而非const的引用不适用于指向const对象的引用。
 // 1.全局函数判断
 bool compareCube( Cube &c1, Cube &c2) {
 	if(c1.getL() == c2.getL() && c1.getW() == c2.getW() && c1.getH() == c2.getH()){
