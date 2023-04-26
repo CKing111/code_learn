@@ -10,10 +10,12 @@ public:  // 构造和析构函数必须放在public下才可以调用
 		m_Age = a;			// 参数构造函数可传参
 		cout << "有参构造函数调用！" << endl;
 	}	// 有参构造函数
+
+
 	// 拷贝构造函数, 固定格式
-	// 作用就是赋值类的内容
 	// 拷贝函数必须加const，不允许拷贝过程修改内容
-	// 必须加&，因为不加为值传递，会生成根据拷贝的Person类型的 p 对象生成临时对象，临时对象还是会调用拷贝构造，然后会变成死循环
+	// 必须加&，因为不加为值传递，会生成根据拷贝的Person类型的 p 对象生成临时对象，
+	// 临时对象还是会调用拷贝构造，然后会变成死循环
 	Person(const Person& p) {
 		m_Age = p.m_Age;		// 赋值拷贝对象的公共参数
 		cout << "拷贝构造函数调用！" << endl;
@@ -27,24 +29,25 @@ public:  // 构造和析构函数必须放在public下才可以调用
 // 拷贝构造使用场景，使用时机
 // 1.用已经创建好的对象来初始化新的对象
 void test01() {
-	Person p1;
+	Person p1;	// 默认构造函数
 	p1.m_Age = 100;
 
-	Person p2(p1);
+	Person p2(p1);	// 拷贝构造函数
 	cout << "p2的年龄：" << p2.m_Age << endl;
 }
 
 // 2. 以值传递的方式给函数参数传值，值传递不会对原始数据进行修改
 //  函数值传递时就是通过拷贝构造函数传递进去值，引用传递不会调用拷贝构造函数
 //  值传递会生成中间的临时值，这个值使用拷贝构造生成
-void doWork(Person p) {		// 函数传参表示为：拷贝构造Person p = Person(p1)，调用了拷贝构造
+void doWork(Person p) {		
+	// 函数传参表示为：拷贝构造Person p = Person(p1)，调用了拷贝构造
 	cout << "函数值传递Person p 的年龄：" << p.m_Age << endl;
 }
 void test02() {
 	Person p1;
 	p1.m_Age = 100;
 
-	doWork(p1);
+	doWork(p1); // Person p = Person(p1)
 }
 
 // 3.以值的方式返回局部对象
@@ -52,7 +55,7 @@ void test02() {
 Person doWork2() {		// 返回值
 	Person p1;	// 默认构造函数
 	p1.m_Age = 100;
-	return p1;	// 拷贝构造函数
+	return p1;	// 拷贝构造函数Person p = Person(p1)
 }
 void test03() {
 	Person p = doWork2();	// 使用函数返回值构造Person p对象
@@ -69,8 +72,8 @@ void test03() {
 	}
 */
 int main() {
-	//test01();
-	//test02();
+	test01();
+	test02();
 	test03();
 	system("pause");
 	return EXIT_SUCCESS;

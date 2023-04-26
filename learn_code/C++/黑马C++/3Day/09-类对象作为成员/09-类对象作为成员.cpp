@@ -9,9 +9,9 @@ using namespace std;
 
 class Phone {
 public:
-	Phone() { cout << "手机的默认构造函数调用!" << endl; }
-	Phone(string name) { m_PhoneName = name; cout << "手的的有参构造函数调用！" << endl; }
-	~Phone() { cout << "手机的析构函数调用!" << endl; }
+	Phone() { cout << "Phone的默认构造函数调用!" << endl; }
+	Phone(string name) { m_PhoneName = name; cout << "Phone的有参构造函数调用！" << endl; }
+	~Phone() { cout << "Phone的析构函数调用!" << endl; }
 
 	string m_PhoneName;
 };
@@ -31,7 +31,7 @@ public:
 	Person(string name, string phoneName, string gameName):m_Name(name),m_Phone(phoneName),m_Game(gameName)
 	{ 
 		//m_Name = name; 
-		cout << "Person的有参构造函数调用！" << endl; 
+		cout << "Person的有参构造函数调用,构造人名列表！" << endl; 
 	}
 
 	void playGame() {
@@ -40,8 +40,8 @@ public:
 	~Person() { cout << "Person的析构函数调用！" << endl; }
 
 	string m_Name;
-	Phone m_Phone;
-	Game m_Game;
+	Phone m_Phone;		// 类对象
+	Game m_Game;		// 类对象
 };
 
 
@@ -56,7 +56,8 @@ void test02() {
 }
 
 int main() {
-	//test01();
+	test01();
+	cout << " " << endl;
 	test02();
 	system("pause");
 	return EXIT_SUCCESS;

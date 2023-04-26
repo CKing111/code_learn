@@ -7,7 +7,7 @@ using namespace std;
 
 // 2.利用全局函数判断点和圆的关系
 void isInCircle(Circle& c, Point& p) {
-	// 获取圆心到店的距离平方
+	// 获取圆心到点距离平方
 	int Distance = ((c.getCenter().getX() - p.getX()) * (c.getCenter().getX() - p.getX())) + ((c.getCenter().getY() - p.getY()) * (c.getCenter().getY() - p.getY()));
 	// 获取半径平方
 	int rDistance = c.getR() * c.getR();
@@ -26,8 +26,8 @@ void isInCircle(Circle& c, Point& p) {
 
 void test01() {
 	Point p1;
-	p1.setX(10);
-	p1.setY(10);
+	p1.setX(1);
+	p1.setY(1);
 
 	Circle c1;
 	Point center;

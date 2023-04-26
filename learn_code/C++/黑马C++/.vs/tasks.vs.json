@@ -1,0 +1,30 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskLabel": "任务-test1",
+      "appliesTo": "test1.cpp",
+      "type": "launch"
+    },
+    {
+      "taskLabel": "任务-test1",
+      "appliesTo": "3Day/01-面向对象设计案例-立方体案例/test1.cpp",
+      "type": "launch"
+    },
+    {
+      "taskLabel": "任务-test1",
+      "appliesTo": "3Day/01-面向对象设计案例-立方体案例/test1.cpp",
+      "type": "launch"
+    },
+    {
+      "taskLabel": "任务-04 C++面向对象模型初探",
+      "appliesTo": "4Day/04 C++面向对象模型初探/04 C++面向对象模型初探.cpp",
+      "type": "launch"
+    },
+    {
+      "taskLabel": "任务-04 C++面向对象模型初探",
+      "appliesTo": "4Day/04 C++面向对象模型初探/",
+      "type": "launch"
+    }
+  ]
+}

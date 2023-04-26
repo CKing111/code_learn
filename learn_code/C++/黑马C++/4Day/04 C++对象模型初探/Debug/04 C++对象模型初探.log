@@ -1,0 +1,4 @@
+﻿  04 C++对象模型初探.cpp
+D:\code\code_learn\learn_code\C++\黑马C++\4Day\04 C++对象模型初探\04 C++对象模型初探.cpp(1,10): warning C4067: 预处理器指令后有意外标记 - 应输入换行符
+D:\code\code_learn\learn_code\C++\黑马C++\4Day\04 C++对象模型初探\04 C++对象模型初探.cpp(5,9): warning C4810: pragma pack(show) 的值 == 8
+  04 C++对象模型初探.vcxproj -> D:\code\code_learn\learn_code\C++\黑马C++\4Day\04 C++对象模型初探\Debug\04 C++对象模型初探.exe

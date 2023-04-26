@@ -22,6 +22,13 @@ public:  // 构造和析构函数必须放在public下才可以调用
 	// 拷贝构造函数, 固定格式
 	// 作用就是赋值类的内容
 	// 拷贝函数必须加const，不允许拷贝过程修改内容
+	/*
+	拷贝构造函数是一种特殊的构造函数，它被用于创建一个新对象，
+	该对象与现有对象具有相同的数据成员值。
+	拷贝构造函数通常用于在创建对象时使用另一个对象作为初始化参数。
+	在C++中，当使用复制构造函数创建一个对象时，
+	系统将在内存中分配一个新的对象，并将现有对象的数据成员值复制到新对象中。
+	*/
 	Person(const Person& p) { 
 		m_Age = p.m_Age;		// 赋值拷贝对象的公共参数
 		cout << "拷贝构造函数调用！" << endl; 
@@ -44,7 +51,7 @@ void test01() {
 
 void test02() {
 	// 2.显示法调用，初始化对象放在右值
-	Person p1 = Person(100);	// 有参函数构造，等价于Person p1(Person(100))
+	Person p1 = Person(100);	// 有参函数构造，等价于Person p1(Person(100))拷贝构造
 	Person p2 = Person(p1);		// 拷贝函数调用，等价于Person p2(Person(p1))
 	Person(100); // 表示匿名对象，编译器在执行该行代码后会马上释放这个对象
 
@@ -58,8 +65,8 @@ void test03() {
 	Person p2 = p1;			// 拷贝构造，等价于Person p2 = Person(p1)
 }
 int main() {
-	//test01();
-	//test02();
+	test01();
+	test02();
 	test03();
 	system("pause");
 	return EXIT_SUCCESS;

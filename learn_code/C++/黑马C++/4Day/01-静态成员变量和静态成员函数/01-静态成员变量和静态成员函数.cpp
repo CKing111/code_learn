@@ -20,7 +20,7 @@ using namespace std;
 
 class Person {
 public:
-	Person() {}
+	Person() { cout << "Person的默认构造函数！" << endl; }
 	int m_A;
 	static int m_Age;		// static就是静态成员变量，会共享数据
 	// 静态成员变量，类内声明，尽量类外进行初始化

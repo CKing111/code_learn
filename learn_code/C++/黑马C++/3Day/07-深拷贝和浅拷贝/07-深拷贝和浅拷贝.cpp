@@ -9,8 +9,14 @@ public:
 	Person() {}	//默认构造
 	// 有参构造，目的是初始化属性
 	Person(const char *name,int age) {
+		cout << "有参构造函数" << endl;
 		m_Name = (char*)malloc(strlen(name) + 1);  // 开辟空间
-		strcpy(m_Name, name);
+					// strlen() 是一个 C 标准库中的字符串处理函数，
+					// 用于计算一个以 null 结尾的字符串的长度，不包括 null 终止符。
+		strcpy(m_Name, name);	// <--
+				// strcpy是C/C++标准库中的一个字符串操作函数，
+				// 用于将一个字符串（以null字符结尾）复制到另一个字符串的缓冲区。
+				// 函数返回指向目标的指针
 		m_Age = age;
 	}
 	// 拷贝，系统会提供默认简单值拷贝
@@ -19,7 +25,8 @@ public:
 	// 浅拷贝析构函数释放内存会出现系统崩溃，
 	// 因为浅拷贝只拷贝地址，但是会释放堆区空间两次，需要使用深拷贝
 	// 自己构造深拷贝构造解决
-	Person(const Person& p) {
+	Person(const Person& p) {		// 深拷贝
+		cout << "深拷贝构造函数" << endl;
 		m_Age = p.m_Age;
 		m_Name = (char*)malloc(strlen(p.m_Name) + 1);	// 分配地址
 		strcpy(m_Name, p.m_Name);	// cpy值
@@ -42,14 +49,14 @@ public:
 	}
 
 	// 姓名
-	char* m_Name;
+	char* m_Name;		// 指针参数，需要深拷贝
 	// 年龄
 	int m_Age;
 };
 
 void test01() {
-	Person p1("老王", 10);
-	Person p2(p1);
+	Person p1("老王", 10);		// 有参构造
+	Person p2(p1);				// 拷贝（深）
 
 	cout << "拷贝p2.name:" << p2.m_Name << ", p2.age:" << p2.m_Age << endl;
 

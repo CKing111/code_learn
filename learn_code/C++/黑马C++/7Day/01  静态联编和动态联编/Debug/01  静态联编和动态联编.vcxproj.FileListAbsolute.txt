@@ -1,0 +1,1 @@
+D:\code\code_learn\learn_code\C++\黑马C++\7Day\01  静态联编和动态联编\Debug\01  静态联编和动态联编.exe

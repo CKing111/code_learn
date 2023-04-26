@@ -6,9 +6,13 @@ using namespace std;
 class Person {
 public:
 	Person() { cout << "默认构造函数调用！" << endl; }
-	Person(int a) { cout << "有参构造函数调用！" << endl; }
+	Person(int a) {
+		cout << "有参构造函数调用！" << endl;
+		//m_A = a;
+	}
 	~Person() { cout << "析构函数调用！" << endl; }
-
+	
+	int m_A;
 };
 
 void test01() {
@@ -38,7 +42,7 @@ void test03() {
 	// 注意：new开辟数组一定会调用默认构造，所以一定要提供默认构造
 	// 栈区开辟空间，可以指定有参构造，堆区不可以
 	Person pArray2[2] = { Person(1),Person(2) };		// 隐式构造
-
+	//cout << pArray2[1] << "----" << pArray2[2] << endl;
 	// 释放堆区数组
 	delete[] pArray;		// 加[]，暗示系统这是一个多目标对象数组，系统会自动寻找调用几次析构函数释放空间
 }

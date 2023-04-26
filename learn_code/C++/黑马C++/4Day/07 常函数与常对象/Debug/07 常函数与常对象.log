@@ -1,0 +1,3 @@
+﻿  07 常函数与常对象.cpp
+D:\code\code_learn\learn_code\C++\黑马C++\4Day\07 常函数与常对象\07 常函数与常对象.cpp(41,17): warning C4269: “p2”: 用编译器生成的默认构造函数初始化的“const”自动数据产生不可靠的结果
+  07 常函数与常对象.vcxproj -> D:\code\code_learn\learn_code\C++\黑马C++\4Day\05 this指针\Debug\07 常函数与常对象.exe

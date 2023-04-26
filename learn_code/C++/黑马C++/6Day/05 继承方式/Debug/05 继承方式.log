@@ -1,0 +1,4 @@
+﻿  05 继承方式.cpp
+D:\code\code_learn\learn_code\C++\黑马C++\6Day\05 继承方式\05 继承方式.cpp(42,7): warning C4101: “s”: 未引用的局部变量
+D:\code\code_learn\learn_code\C++\黑马C++\6Day\05 继承方式\05 继承方式.cpp(55,7): warning C4101: “s”: 未引用的局部变量
+  05 继承方式.vcxproj -> D:\code\code_learn\learn_code\C++\黑马C++\6Day\01 关系运算符重载\Debug\05 继承方式.exe

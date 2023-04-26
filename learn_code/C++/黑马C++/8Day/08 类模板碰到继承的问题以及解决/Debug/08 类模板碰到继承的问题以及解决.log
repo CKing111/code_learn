@@ -1,0 +1,3 @@
+﻿  08 类模板碰到继承的问题以及解决.cpp
+D:\code\code_learn\learn_code\C++\黑马C++\8Day\08 类模板碰到继承的问题以及解决\08 类模板碰到继承的问题以及解决.cpp(24,19): warning C4101: “s”: 未引用的局部变量
+  08 类模板碰到继承的问题以及解决.vcxproj -> D:\code\code_learn\learn_code\C++\黑马C++\8Day\01 函数模版的基本语法\Debug\08 类模板碰到继承的问题以及解决.exe

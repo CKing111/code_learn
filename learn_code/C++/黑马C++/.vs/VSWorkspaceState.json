@@ -1,13 +1,16 @@
 {
   "ExpandedNodes": [
     "",
-    "\\2Day\\08-C++语言下的封装",
-    "\\2Day\\09-建议成员变量设置为private",
-    "\\2Day\\extern “C”浅析",
-    "\\3Day",
-    "\\3Day\\02-2-(头文件)-面向对象设计案例-点和圆的关系",
-    "\\4Day"
+    "\\5Day",
+    "\\5Day\\02 加好运算符重载",
+    "\\5Day\\03 左移运算符重载",
+    "\\5Day\\04 递增递减运算符重载",
+    "\\5Day\\05 指针运算符重载",
+    "\\5Day\\06 赋值运算符=重载",
+    "\\6Day",
+    "\\6Day\\01 关系运算符重载",
+    "\\6Day\\03 强化训练-字符串类封装"
   ],
-  "SelectedNode": "\\3Day\\02-2-(头文件)-面向对象设计案例-点和圆的关系\\Circle.h",
+  "SelectedNode": "\\6Day\\03 强化训练-字符串类封装\\MyString.h",
   "PreviewInSolutionExplorer": false
 }
