@@ -1,16 +1,15 @@
 {
   "ExpandedNodes": [
     "",
-    "\\5Day",
+    "\\5Day\\01 数组类封装",
     "\\5Day\\02 加好运算符重载",
     "\\5Day\\03 左移运算符重载",
     "\\5Day\\04 递增递减运算符重载",
     "\\5Day\\05 指针运算符重载",
     "\\5Day\\06 赋值运算符=重载",
-    "\\6Day",
     "\\6Day\\01 关系运算符重载",
     "\\6Day\\03 强化训练-字符串类封装"
   ],
-  "SelectedNode": "\\6Day\\03 强化训练-字符串类封装\\MyString.h",
+  "SelectedNode": "\\C++Day8笔记.docx",
   "PreviewInSolutionExplorer": false
 }
