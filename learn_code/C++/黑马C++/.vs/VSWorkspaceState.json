@@ -1,15 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\5Day\\01 数组类封装",
-    "\\5Day\\02 加好运算符重载",
-    "\\5Day\\03 左移运算符重载",
-    "\\5Day\\04 递增递减运算符重载",
-    "\\5Day\\05 指针运算符重载",
-    "\\5Day\\06 赋值运算符=重载",
-    "\\6Day\\01 关系运算符重载",
-    "\\6Day\\03 强化训练-字符串类封装"
+    "\\9Day",
+    "\\9Day\\01 C++类型转换",
+    "\\9Day\\02 异常的基本属性"
   ],
-  "SelectedNode": "\\C++Day8笔记.docx",
+  "SelectedNode": "\\9Day\\02 异常的基本属性\\02 异常的基本属性.cpp",
   "PreviewInSolutionExplorer": false
 }
