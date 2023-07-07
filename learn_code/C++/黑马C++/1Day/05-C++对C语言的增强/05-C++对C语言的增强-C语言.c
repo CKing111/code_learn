@@ -51,7 +51,7 @@ void test06() {
 
 	int* p = (int*)&m_B;
 	*p = 200;
-	printf("*p = %d, m_B = %d", *p, m_B);
+	printf("CÎÄ¼ş--*p = %d, m_B = %d", *p, m_B);
 }
 int main() {
 	//test01();

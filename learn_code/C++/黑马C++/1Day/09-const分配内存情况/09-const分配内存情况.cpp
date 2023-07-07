@@ -30,11 +30,12 @@ void test03(){
 	const Person p1 = {};		//const对象必须初始化.
 	// 不可以直接改动，需要用指针
 	// 指针可以改说明有分配地址
+	cout << "1 姓名：" << p1.m_Name << ", 年龄：" << p1.m_Age << endl;
 	Person* p = (Person*)&p1;  //获取指针
 	p->m_Name = "XXXX";
 	(*p).m_Age = 18;
-
-	cout << "姓名：" << p1.m_Name << ", 年龄：" << p1.m_Age << endl;
+	// cout << "姓名：" << p.m_Name << ", 年龄：" << p.m_Age << endl;
+	cout << "2 姓名：" << p1.m_Name << ", 年龄：" << p1.m_Age << endl;
 }
 int main() {
 	//test01();

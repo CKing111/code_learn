@@ -59,7 +59,7 @@ void func3(const int& a) { cout << "const引用func(const int & a )" << endl; };
 void test03() {
 	int a = 10;
 	func3(a);		// 可以
-	func3(10);		// 一般引用不可以不可以，引用空间不合法， 加const后可以引用
+	func3(10);		// 一般引用不可以，引用空间不合法， 加const后可以引用
 }
 
 

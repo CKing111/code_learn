@@ -16,6 +16,7 @@ public:
 
 class Cat :public Animal {
 public:
+	// 重写虚函数
 	void speak() {
 		cout << "猫在说话！" << endl;
 	}

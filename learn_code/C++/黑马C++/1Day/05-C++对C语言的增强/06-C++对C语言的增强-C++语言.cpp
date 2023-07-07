@@ -51,6 +51,7 @@ void test05() {
 
 	cout << "ret = " << (a > b ? a : b) << endl;
 	(a > b ? a : b) = 100; //通过，b=100，C语言返回的是变量
+		 // c = (a > b) ? a : b;  // 如果a大于b，返回a的值，否则返回b的值
 	cout << "a = " << a << endl;
 	cout << "b = " << b << endl;
 }
@@ -71,9 +72,9 @@ void test06() {
 		int *p = (int *)&tmp;
 		*p指向临时空间，原始常量m_B没有改变；	
 	*/
-	cout << "*p = " << *p << ", m_B = " << m_B << endl;
+	cout <<"CPP文件---" << "*p = " << *p << ", m_B = " << m_B << endl;
 }
-
+ 
 int main() {
 	//test01();
 	//test03();
