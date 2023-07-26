@@ -1,0 +1,3 @@
+﻿D:\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(452,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (03 queue容器.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  07 queue容器.cpp
+  03 queue容器.vcxproj -> F:\Postgraduate\C++\B站黑马\10-13-STL\01-STL 三大组件\Debug\07 queue容器.exe

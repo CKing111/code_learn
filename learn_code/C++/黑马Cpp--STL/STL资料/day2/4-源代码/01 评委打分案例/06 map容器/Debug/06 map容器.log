@@ -1,0 +1,65 @@
+﻿D:\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(452,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (06 map容器.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  06 map容器.cpp
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\xutility(620,1): error C3848:  具有类型“const MyCompare”的表达式会丢失一些 const-volatile 限定符以调用“bool MyCompare::operator ()(int,int)”
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\xutility(619): message :  查看对正在编译的函数 模板 实例化“bool std::_Debug_lt_pred<const MyCompare&,const _Kty&,const _Keyty&,0>(_Pr,_Ty1,_Ty2) noexcept(<expr>)”的引用
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\xutility(619): message :         with
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\xutility(619): message :         [
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\xutility(619): message :             _Kty=int,
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\xutility(619): message :             _Keyty=int,
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\xutility(619): message :             _Pr=const MyCompare &,
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\xutility(619): message :             _Ty1=const int &,
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\xutility(619): message :             _Ty2=const int &
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\xutility(619): message :         ]
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\map(172): message :  查看对正在编译的函数 模板 实例化“std::_Tree_find_result<std::_Tree_node<std::pair<const _Kty,_Ty>,std::_Default_allocator_traits<_Alloc>::void_pointer> *> std::_Tree<std::_Tmap_traits<_Kty,_Ty,_Pr,_Alloc,false>>::_Find_lower_bound<_Keyty>(const _Keyty &) const”的引用
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\map(172): message :         with
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\map(172): message :         [
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\map(172): message :             _Kty=int,
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\map(172): message :             _Ty=int,
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\map(172): message :             _Alloc=std::allocator<std::pair<const int,int>>,
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\map(172): message :             _Pr=MyCompare,
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\map(172): message :             _Keyty=int
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\map(172): message :         ]
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\map(172): message :  查看对正在编译的函数 模板 实例化“std::_Tree_find_result<std::_Tree_node<std::pair<const _Kty,_Ty>,std::_Default_allocator_traits<_Alloc>::void_pointer> *> std::_Tree<std::_Tmap_traits<_Kty,_Ty,_Pr,_Alloc,false>>::_Find_lower_bound<_Keyty>(const _Keyty &) const”的引用
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\map(172): message :         with
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\map(172): message :         [
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\map(172): message :             _Kty=int,
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\map(172): message :             _Ty=int,
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\map(172): message :             _Alloc=std::allocator<std::pair<const int,int>>,
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\map(172): message :             _Pr=MyCompare,
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\map(172): message :             _Keyty=int
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\map(172): message :         ]
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\map(150): message :  查看对正在编译的函数 模板 实例化“std::pair<std::_Tree_node<std::pair<const _Kty,_Ty>,std::_Default_allocator_traits<_Alloc>::void_pointer> *,bool> std::map<_Kty,_Ty,MyCompare,_Alloc>::_Try_emplace<int,>(_Keyty &&)”的引用
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\map(150): message :         with
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\map(150): message :         [
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\map(150): message :             _Kty=int,
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\map(150): message :             _Ty=int,
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\map(150): message :             _Alloc=std::allocator<std::pair<const int,int>>,
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\map(150): message :             _Keyty=int
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\map(150): message :         ]
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\map(150): message :  查看对正在编译的函数 模板 实例化“std::pair<std::_Tree_node<std::pair<const _Kty,_Ty>,std::_Default_allocator_traits<_Alloc>::void_pointer> *,bool> std::map<_Kty,_Ty,MyCompare,_Alloc>::_Try_emplace<int,>(_Keyty &&)”的引用
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\map(150): message :         with
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\map(150): message :         [
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\map(150): message :             _Kty=int,
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\map(150): message :             _Ty=int,
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\map(150): message :             _Alloc=std::allocator<std::pair<const int,int>>,
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\map(150): message :             _Keyty=int
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\map(150): message :         ]
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\map(149): message :  在编译 类 模板 成员函数“int &std::map<int,int,MyCompare,std::allocator<std::pair<const _Kty,_Ty>>>::operator [](int &&)”时
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\map(149): message :         with
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\map(149): message :         [
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\map(149): message :             _Kty=int,
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\map(149): message :             _Ty=int
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\map(149): message :         ]
+F:\Postgraduate\C++\B站黑马\讲义资源资料\STL资料\day2\4-源代码\01 评委打分案例\06 map容器\06 map容器.cpp(159): message :  查看对正在编译的函数 模板 实例化“int &std::map<int,int,MyCompare,std::allocator<std::pair<const _Kty,_Ty>>>::operator [](int &&)”的引用
+F:\Postgraduate\C++\B站黑马\讲义资源资料\STL资料\day2\4-源代码\01 评委打分案例\06 map容器\06 map容器.cpp(159): message :         with
+F:\Postgraduate\C++\B站黑马\讲义资源资料\STL资料\day2\4-源代码\01 评委打分案例\06 map容器\06 map容器.cpp(159): message :         [
+F:\Postgraduate\C++\B站黑马\讲义资源资料\STL资料\day2\4-源代码\01 评委打分案例\06 map容器\06 map容器.cpp(159): message :             _Kty=int,
+F:\Postgraduate\C++\B站黑马\讲义资源资料\STL资料\day2\4-源代码\01 评委打分案例\06 map容器\06 map容器.cpp(159): message :             _Ty=int
+F:\Postgraduate\C++\B站黑马\讲义资源资料\STL资料\day2\4-源代码\01 评委打分案例\06 map容器\06 map容器.cpp(159): message :         ]
+F:\Postgraduate\C++\B站黑马\讲义资源资料\STL资料\day2\4-源代码\01 评委打分案例\06 map容器\06 map容器.cpp(155): message :  查看对正在编译的 类 模板 实例化“std::map<int,int,MyCompare,std::allocator<std::pair<const _Kty,_Ty>>>”的引用
+F:\Postgraduate\C++\B站黑马\讲义资源资料\STL资料\day2\4-源代码\01 评委打分案例\06 map容器\06 map容器.cpp(155): message :         with
+F:\Postgraduate\C++\B站黑马\讲义资源资料\STL资料\day2\4-源代码\01 评委打分案例\06 map容器\06 map容器.cpp(155): message :         [
+F:\Postgraduate\C++\B站黑马\讲义资源资料\STL资料\day2\4-源代码\01 评委打分案例\06 map容器\06 map容器.cpp(155): message :             _Kty=int,
+F:\Postgraduate\C++\B站黑马\讲义资源资料\STL资料\day2\4-源代码\01 评委打分案例\06 map容器\06 map容器.cpp(155): message :             _Ty=int
+F:\Postgraduate\C++\B站黑马\讲义资源资料\STL资料\day2\4-源代码\01 评委打分案例\06 map容器\06 map容器.cpp(155): message :         ]
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\xutility(620,5): error C2056:  非法表达式

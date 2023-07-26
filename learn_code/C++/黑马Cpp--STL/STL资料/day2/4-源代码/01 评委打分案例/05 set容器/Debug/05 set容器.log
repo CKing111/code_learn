@@ -1,0 +1,115 @@
+﻿D:\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(452,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (05 set容器.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  05 set容器.cpp
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\xutility(620,1): error C3848:  具有类型“const MyCompare”的表达式会丢失一些 const-volatile 限定符以调用“bool MyCompare::operator ()(int,int)”
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\xutility(619): message :  查看对正在编译的函数 模板 实例化“bool std::_Debug_lt_pred<const MyCompare&,const _Kty&,const _Keyty&,0>(_Pr,_Ty1,_Ty2) noexcept(<expr>)”的引用
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\xutility(619): message :         with
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\xutility(619): message :         [
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\xutility(619): message :             _Kty=int,
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\xutility(619): message :             _Keyty=int,
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\xutility(619): message :             _Pr=const MyCompare &,
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\xutility(619): message :             _Ty1=const int &,
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\xutility(619): message :             _Ty2=const int &
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\xutility(619): message :         ]
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\xtree(1017): message :  查看对正在编译的函数 模板 实例化“std::_Tree_find_result<std::_Tree_node<int,std::_Default_allocator_traits<_Alloc>::void_pointer> *> std::_Tree<std::_Tset_traits<_Kty,_Pr,_Alloc,false>>::_Find_lower_bound<_Key>(const _Keyty &) const”的引用
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\xtree(1017): message :         with
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\xtree(1017): message :         [
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\xtree(1017): message :             _Alloc=std::allocator<int>,
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\xtree(1017): message :             _Kty=int,
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\xtree(1017): message :             _Pr=MyCompare,
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\xtree(1017): message :             _Key=int,
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\xtree(1017): message :             _Keyty=int
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\xtree(1017): message :         ]
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\xtree(1017): message :  查看对正在编译的函数 模板 实例化“std::_Tree_find_result<std::_Tree_node<int,std::_Default_allocator_traits<_Alloc>::void_pointer> *> std::_Tree<std::_Tset_traits<_Kty,_Pr,_Alloc,false>>::_Find_lower_bound<_Key>(const _Keyty &) const”的引用
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\xtree(1017): message :         with
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\xtree(1017): message :         [
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\xtree(1017): message :             _Alloc=std::allocator<int>,
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\xtree(1017): message :             _Kty=int,
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\xtree(1017): message :             _Pr=MyCompare,
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\xtree(1017): message :             _Key=int,
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\xtree(1017): message :             _Keyty=int
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\xtree(1017): message :         ]
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\xtree(1364): message :  查看对正在编译的函数 模板 实例化“std::pair<std::_Tree_node<int,std::_Default_allocator_traits<_Alloc>::void_pointer> *,bool> std::_Tree<std::_Tset_traits<_Kty,_Pr,_Alloc,false>>::_Emplace<int>(int &&)”的引用
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\xtree(1364): message :         with
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\xtree(1364): message :         [
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\xtree(1364): message :             _Alloc=std::allocator<int>,
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\xtree(1364): message :             _Kty=int,
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\xtree(1364): message :             _Pr=MyCompare
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\xtree(1364): message :         ]
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\xtree(1364): message :  查看对正在编译的函数 模板 实例化“std::pair<std::_Tree_node<int,std::_Default_allocator_traits<_Alloc>::void_pointer> *,bool> std::_Tree<std::_Tset_traits<_Kty,_Pr,_Alloc,false>>::_Emplace<int>(int &&)”的引用
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\xtree(1364): message :         with
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\xtree(1364): message :         [
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\xtree(1364): message :             _Alloc=std::allocator<int>,
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\xtree(1364): message :             _Kty=int,
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\xtree(1364): message :             _Pr=MyCompare
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\xtree(1364): message :         ]
+F:\Postgraduate\C++\B站黑马\讲义资源资料\STL资料\day2\4-源代码\01 评委打分案例\05 set容器\05 set容器.cpp(200): message :  查看对正在编译的函数 模板 实例化“std::pair<std::_Tree_const_iterator<std::_Tree_val<std::_Tree_simple_types<int>>>,bool> std::_Tree<std::_Tset_traits<_Kty,_Pr,_Alloc,false>>::insert<false,0>(int &&)”的引用
+F:\Postgraduate\C++\B站黑马\讲义资源资料\STL资料\day2\4-源代码\01 评委打分案例\05 set容器\05 set容器.cpp(200): message :         with
+F:\Postgraduate\C++\B站黑马\讲义资源资料\STL资料\day2\4-源代码\01 评委打分案例\05 set容器\05 set容器.cpp(200): message :         [
+F:\Postgraduate\C++\B站黑马\讲义资源资料\STL资料\day2\4-源代码\01 评委打分案例\05 set容器\05 set容器.cpp(200): message :             _Kty=int,
+F:\Postgraduate\C++\B站黑马\讲义资源资料\STL资料\day2\4-源代码\01 评委打分案例\05 set容器\05 set容器.cpp(200): message :             _Pr=MyCompare,
+F:\Postgraduate\C++\B站黑马\讲义资源资料\STL资料\day2\4-源代码\01 评委打分案例\05 set容器\05 set容器.cpp(200): message :             _Alloc=std::allocator<int>
+F:\Postgraduate\C++\B站黑马\讲义资源资料\STL资料\day2\4-源代码\01 评委打分案例\05 set容器\05 set容器.cpp(200): message :         ]
+F:\Postgraduate\C++\B站黑马\讲义资源资料\STL资料\day2\4-源代码\01 评委打分案例\05 set容器\05 set容器.cpp(200): message :  查看对正在编译的函数 模板 实例化“std::pair<std::_Tree_const_iterator<std::_Tree_val<std::_Tree_simple_types<int>>>,bool> std::_Tree<std::_Tset_traits<_Kty,_Pr,_Alloc,false>>::insert<false,0>(int &&)”的引用
+F:\Postgraduate\C++\B站黑马\讲义资源资料\STL资料\day2\4-源代码\01 评委打分案例\05 set容器\05 set容器.cpp(200): message :         with
+F:\Postgraduate\C++\B站黑马\讲义资源资料\STL资料\day2\4-源代码\01 评委打分案例\05 set容器\05 set容器.cpp(200): message :         [
+F:\Postgraduate\C++\B站黑马\讲义资源资料\STL资料\day2\4-源代码\01 评委打分案例\05 set容器\05 set容器.cpp(200): message :             _Kty=int,
+F:\Postgraduate\C++\B站黑马\讲义资源资料\STL资料\day2\4-源代码\01 评委打分案例\05 set容器\05 set容器.cpp(200): message :             _Pr=MyCompare,
+F:\Postgraduate\C++\B站黑马\讲义资源资料\STL资料\day2\4-源代码\01 评委打分案例\05 set容器\05 set容器.cpp(200): message :             _Alloc=std::allocator<int>
+F:\Postgraduate\C++\B站黑马\讲义资源资料\STL资料\day2\4-源代码\01 评委打分案例\05 set容器\05 set容器.cpp(200): message :         ]
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\xutility(620,5): error C2056:  非法表达式
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\xutility(620,1): error C3848:  具有类型“const MyComparePerson”的表达式会丢失一些 const-volatile 限定符以调用“bool MyComparePerson::operator ()(const Person &,const Person &)”
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\xutility(619): message :  查看对正在编译的函数 模板 实例化“bool std::_Debug_lt_pred<const MyComparePerson&,const _Kty&,const _Keyty&,0>(_Pr,_Ty1,_Ty2) noexcept(<expr>)”的引用
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\xutility(619): message :         with
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\xutility(619): message :         [
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\xutility(619): message :             _Kty=Person,
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\xutility(619): message :             _Keyty=Person,
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\xutility(619): message :             _Pr=const MyComparePerson &,
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\xutility(619): message :             _Ty1=const Person &,
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\xutility(619): message :             _Ty2=const Person &
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\xutility(619): message :         ]
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\xtree(1017): message :  查看对正在编译的函数 模板 实例化“std::_Tree_find_result<std::_Tree_node<Person,std::_Default_allocator_traits<_Alloc>::void_pointer> *> std::_Tree<std::_Tset_traits<_Kty,_Pr,_Alloc,false>>::_Find_lower_bound<_Key>(const _Keyty &) const”的引用
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\xtree(1017): message :         with
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\xtree(1017): message :         [
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\xtree(1017): message :             _Alloc=std::allocator<Person>,
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\xtree(1017): message :             _Kty=Person,
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\xtree(1017): message :             _Pr=MyComparePerson,
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\xtree(1017): message :             _Key=Person,
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\xtree(1017): message :             _Keyty=Person
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\xtree(1017): message :         ]
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\xtree(1017): message :  查看对正在编译的函数 模板 实例化“std::_Tree_find_result<std::_Tree_node<Person,std::_Default_allocator_traits<_Alloc>::void_pointer> *> std::_Tree<std::_Tset_traits<_Kty,_Pr,_Alloc,false>>::_Find_lower_bound<_Key>(const _Keyty &) const”的引用
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\xtree(1017): message :         with
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\xtree(1017): message :         [
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\xtree(1017): message :             _Alloc=std::allocator<Person>,
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\xtree(1017): message :             _Kty=Person,
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\xtree(1017): message :             _Pr=MyComparePerson,
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\xtree(1017): message :             _Key=Person,
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\xtree(1017): message :             _Keyty=Person
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\xtree(1017): message :         ]
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\xtree(1353): message :  查看对正在编译的函数 模板 实例化“std::pair<std::_Tree_node<Person,std::_Default_allocator_traits<_Alloc>::void_pointer> *,bool> std::_Tree<std::_Tset_traits<_Kty,_Pr,_Alloc,false>>::_Emplace<const Person&>(const Person &)”的引用
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\xtree(1353): message :         with
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\xtree(1353): message :         [
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\xtree(1353): message :             _Alloc=std::allocator<Person>,
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\xtree(1353): message :             _Kty=Person,
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\xtree(1353): message :             _Pr=MyComparePerson
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\xtree(1353): message :         ]
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\xtree(1353): message :  查看对正在编译的函数 模板 实例化“std::pair<std::_Tree_node<Person,std::_Default_allocator_traits<_Alloc>::void_pointer> *,bool> std::_Tree<std::_Tset_traits<_Kty,_Pr,_Alloc,false>>::_Emplace<const Person&>(const Person &)”的引用
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\xtree(1353): message :         with
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\xtree(1353): message :         [
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\xtree(1353): message :             _Alloc=std::allocator<Person>,
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\xtree(1353): message :             _Kty=Person,
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\xtree(1353): message :             _Pr=MyComparePerson
+D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\xtree(1353): message :         ]
+F:\Postgraduate\C++\B站黑马\讲义资源资料\STL资料\day2\4-源代码\01 评委打分案例\05 set容器\05 set容器.cpp(251): message :  查看对正在编译的函数 模板 实例化“std::pair<std::_Tree_const_iterator<std::_Tree_val<std::_Tree_simple_types<Person>>>,bool> std::_Tree<std::_Tset_traits<_Kty,_Pr,_Alloc,false>>::insert<false,0>(const Person &)”的引用
+F:\Postgraduate\C++\B站黑马\讲义资源资料\STL资料\day2\4-源代码\01 评委打分案例\05 set容器\05 set容器.cpp(251): message :         with
+F:\Postgraduate\C++\B站黑马\讲义资源资料\STL资料\day2\4-源代码\01 评委打分案例\05 set容器\05 set容器.cpp(251): message :         [
+F:\Postgraduate\C++\B站黑马\讲义资源资料\STL资料\day2\4-源代码\01 评委打分案例\05 set容器\05 set容器.cpp(251): message :             _Kty=Person,
+F:\Postgraduate\C++\B站黑马\讲义资源资料\STL资料\day2\4-源代码\01 评委打分案例\05 set容器\05 set容器.cpp(251): message :             _Pr=MyComparePerson,
+F:\Postgraduate\C++\B站黑马\讲义资源资料\STL资料\day2\4-源代码\01 评委打分案例\05 set容器\05 set容器.cpp(251): message :             _Alloc=std::allocator<Person>
+F:\Postgraduate\C++\B站黑马\讲义资源资料\STL资料\day2\4-源代码\01 评委打分案例\05 set容器\05 set容器.cpp(251): message :         ]
+F:\Postgraduate\C++\B站黑马\讲义资源资料\STL资料\day2\4-源代码\01 评委打分案例\05 set容器\05 set容器.cpp(251): message :  查看对正在编译的函数 模板 实例化“std::pair<std::_Tree_const_iterator<std::_Tree_val<std::_Tree_simple_types<Person>>>,bool> std::_Tree<std::_Tset_traits<_Kty,_Pr,_Alloc,false>>::insert<false,0>(const Person &)”的引用
+F:\Postgraduate\C++\B站黑马\讲义资源资料\STL资料\day2\4-源代码\01 评委打分案例\05 set容器\05 set容器.cpp(251): message :         with
+F:\Postgraduate\C++\B站黑马\讲义资源资料\STL资料\day2\4-源代码\01 评委打分案例\05 set容器\05 set容器.cpp(251): message :         [
+F:\Postgraduate\C++\B站黑马\讲义资源资料\STL资料\day2\4-源代码\01 评委打分案例\05 set容器\05 set容器.cpp(251): message :             _Kty=Person,
+F:\Postgraduate\C++\B站黑马\讲义资源资料\STL资料\day2\4-源代码\01 评委打分案例\05 set容器\05 set容器.cpp(251): message :             _Pr=MyComparePerson,
+F:\Postgraduate\C++\B站黑马\讲义资源资料\STL资料\day2\4-源代码\01 评委打分案例\05 set容器\05 set容器.cpp(251): message :             _Alloc=std::allocator<Person>
+F:\Postgraduate\C++\B站黑马\讲义资源资料\STL资料\day2\4-源代码\01 评委打分案例\05 set容器\05 set容器.cpp(251): message :         ]

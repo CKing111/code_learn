@@ -1,0 +1,6 @@
+﻿  02-string容器.cpp
+d:\code\trainingcode\黑马cpp--stl\day1\02-string容器\02-string容器.cpp(60): warning C4018: “<”: 有符号/无符号不匹配
+d:\code\trainingcode\黑马cpp--stl\day1\02-string容器\02-string容器.cpp(64): warning C4018: “<”: 有符号/无符号不匹配
+d:\code\trainingcode\黑马cpp--stl\day1\02-string容器\02-string容器.cpp(251): warning C4018: “<”: 有符号/无符号不匹配
+  02-string容器.vcxproj -> D:\code\TrainingCode\黑马Cpp--STL\Day1\Debug\02-string容器.exe
+  02-string容器.vcxproj -> D:\code\TrainingCode\黑马Cpp--STL\Day1\Debug\02-string容器.pdb (Partial PDB)
